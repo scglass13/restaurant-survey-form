@@ -7,96 +7,129 @@
     <title>Restaurant Survey Form</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main>
         <header>
             <h1 id="title">Restaurant Survey Form</h1>
-            <p id="description">Thank you for your participation in this survey!</p>
+            <p id="description"><em>Thank you for your participation in this survey!</em></p>
         </header>
         <form id="survey-form">
-            <label id="name-label" for="name">Name</label>
-            <input id="name" placeholder="Enter your name" required />
-            <label id="email-label" for="email">Email</label>
-            <input id="email" placeholder="Enter your email" type="email" required />
-            <label id="number-label" for="number">Age(optional)</label>
-            <input id="number" type="number" name="number" min="12" max="99" placeholder="12" />
-            <!-- dropdown button -->
-            <label id="visits-label" for="num-visits">How many times have you eaten at our establisment?</label>
-            <select id="num-visits">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5+</option>
-            </select>
-            <!-- rating -->
-            <div id="radio1" name="radio1">
-                <label>How would you rate your most recent visit?</label>
-                <input type="radio" id="great" name="great" value="great" />
-                <label for="great" checked>Great!</label>
-                <input type="radio" id="good" name="good" value="good" />
-                <label for="good">Good</label>
-                <input type="radio" id="okay" name="okay" value="okay" />
-                <label for="okay">Okay</label>
-                <input type="radio" id="bad" name="bad" value="bad" />
-                <label for="bad">Bad</label>
+            <div id="user-info">
+                <div class="user-item">
+                    <label id="name-label" for="name">Name:</label>
+                    <input id="name" placeholder="Enter your name" required />
+                </div>
+                <div class="user-item">
+                    <label id="email-label" for="email">Email:</label>
+                    <input id="email" placeholder="Enter your email" type="email" required />
+                </div>
+                <div class="user-item">
+                    <label id="number-label" for="number">Age(optional):</label>
+                    <input id="number" type="number" name="number" min="12" max="99" placeholder="12" />
+                </div>
             </div>
             <!-- dropdown button -->
-            <div id="dropdown" name="dropdown">
-                <label id="dropdown" for="dropdown">How</label>
-                <select id="dropdown">
-                    <option disabled selected hidden>Select an option</option>
-                    <option>Challenges</option>
-                    <option>Projects</option>
-                    <option>Community</option>
-                    <option>Open source</option>
+            <div class="form-body">
+                <label id="visits-label" for="num-visits">How many times have you eaten at our establisment?</label>
+                <select id="num-visits">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5+</option>
                 </select>
-            </div>
-            <!-- checkbox -->
-            <div id="checkbox-group" name="checkbox-group">
-                <input type="checkbox" id="front-end-projects" value="front-end" />
-                <label for="front-end-projects">Front-end Projects</label>
-                <input type="checkbox" id="back-end-projects" value="back-end" />
-                <label for="back-end-projects">Back-end Projects</label>
-                <input type="checkbox" id="data-visualization" value="data" />
-                <label for="data-visualization">Data Visualization</label>
-                <input type="checkbox" id="challenges" value="challenges" />
-                <label for="challenges">Challenges</label>
-                <input type="checkbox" id="open-src-comm" value="open-src-comm" />
-                <label for="open-src-comm">Open Source Community</label>
-                <input type="checkbox" id="gitter-help-rooms" value="gitter" />
-                <label for="gitter-help-rooms">Gitter help rooms</label>
-                <input type="checkbox" id="videos" value="videos" />
-                <label for="videos">Videos</label>
-                <input type="checkbox" id="city-meetups" value="meetups" />
-                <label for="city-meetups">City Meetups</label>
-                <input type="checkbox" id="wiki" value="wiki" />
-                <label for="wiki">Wiki</label>
-                <input type="checkbox" id="forum" value="form" />
-                <label for="forum">Forum</label>
-                <input type="checkbox" id="additional-courses" value="courses" />
-                <label for="additional-courses">Additional Courses</label>
-            </div>
-            <div id="radio2" name="radio2">
-                <label>Would you recommend our restaurant?</label>
-                <input type="radio" id="definitely" name="definitely" value="definitely" />
-                <label for="definitely" checked>Definitely</label>
-                <input type="radio" id="maybe" name="maybe" value="maybe" />
-                <label for="maybe">Maybe</label>
-                <input type="radio" id="not-sure" name="not-sure" value="not-sure" />
-                <label for="not-sure">Not sure</label>
-            </div>
-            <!-- comments & suggestions -->
-            <div id="text-area" name="text-area">
-                <label for="suggestions">Any comments or suggestions?</label>
-                <textarea id="suggestions" name="suggestions"></textarea>
-            </div>
-            <!-- submit button -->
-            <div id="submit-button" name="submit-button">
-                <input type="submit" value="Submit" id="submit" />
+                <!-- rating -->
+                <div>
+                    <p>How would you rate your most recent visit?</p>
+                    <label for="great" checked>
+                        <input type="radio" id="great" name="radio1" value="great" />
+                        Great!</label>
+                    <label for="good">
+                        <input type="radio" id="good" name="radio1" value="good" />
+                        Good</label>
+                    <label for="okay">
+                        <input type="radio" id="okay" name="radio1" value="okay" />
+                        Okay</label>
+                    <label for="bad">
+                        <input type="radio" id="bad" name="radio1" value="bad" />
+                        Bad</label>
+                </div>
+                <!-- dropdown button -->
+                <div id="dropdown" name="dropdown">
+                    <label id="dropdown" for="dropdown">How did you hear about us?
+                        <select id="dropdown">
+                            <option disabled selected hidden>Select an option</option>
+                            <option>Social Media</option>
+                            <option>Advertisement</option>
+                            <option>Word-of-mouth</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                </div>
+                <!-- checkbox -->
+                <div id="checkbox-group" name="checkbox-group">
+                    <p>What are some of your favorite dishes?</p>
+                    <label for="cheeseburger">
+                        <input type="checkbox" id="cheeseburger" value="cheeseburger" />
+                        Cheeseburger</label>
+                    <label for="sandwich">
+                        <input type="checkbox" id="sandwich" value="sandwich" />
+                        Sandwich</label>
+                    <label for="wrap">
+                        <input type="checkbox" id="wrap" value="wrap" />
+                        Wrap</label>
+                    <label for="salad">
+                        <input type="checkbox" id="salad" value="salad" />
+                        Salad</label>
+                    <label for="soup">
+                        <input type="checkbox" id="soup" value="soup" />
+                        Soup</label>
+                    <label for="apps">
+                        <input type="checkbox" id="apps" value="apps" />
+                        Appetizers</label>
+                    <label for="cheesecake">
+                        <input type="checkbox" id="cheesecake" value="cheesecake" />
+                        Cheesecake</label>
+                    <label for="chocolate-cake">
+                        <input type="checkbox" id="chocolate-cake" value="chocolate-cake" />
+                        Chocolate Cake</label>
+                    <label for="wiki">
+                        <input type="checkbox" id="iceCream" value="iceCream" />
+                        Ice Cream</label>
+                    <label for="brownie">
+                        <input type="checkbox" id="brownie" value="brownie" />
+                        Brownie</label>
+                    <label for="other">
+                        <input type="checkbox" id="other" value="other" />
+                        Other</label>
+                </div>
+                <div>
+                    <p>Would you recommend our restaurant?</p>
+                    <label for="definitely" checked>
+                        <input type="radio" id="definitely" name="radio2" value="definitely" />
+                        Definitely</label>
+                    <label for="maybe">
+                        <input type="radio" id="maybe" name="radio2" value="maybe" />
+                        Maybe</label>
+                    <label for="not-sure">
+                        <input type="radio" id="not-sure" name="radio2" value="not-sure" />
+                        Not sure</label>
+                </div>
+                <!-- comments & suggestions -->
+                <div id="text-area" name="text-area">
+                    <label for="suggestions">Any comments or suggestions?</label>
+                    <textarea id="suggestions" name="suggestions"></textarea>
+                </div>
+                <!-- submit button -->
+                <div id="submit-button" name="submit-button">
+                    <input type="submit" value="Submit" id="submit" />
+                </div>
             </div>
         </form>
     </main>
