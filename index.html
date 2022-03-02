@@ -1,139 +1,295 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Restaurant Survey Form</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-</head>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    <main>
-        <header>
-            <h1 id="title">Restaurant Survey Form</h1>
-            <p id="description"><em>Thank you for your participation in this survey!</em></p>
-        </header>
-        <form id="survey-form">
-            <div id="user-info">
-                <div class="user-item">
-                    <label id="name-label" for="name">Name:</label>
-                    <input id="name" placeholder="Enter your name" required />
-                </div>
-                <div class="user-item">
-                    <label id="email-label" for="email">Email:</label>
-                    <input id="email" placeholder="Enter your email" type="email" required />
-                </div>
-                <div class="user-item">
-                    <label id="number-label" for="number">Age(optional):</label>
-                    <input id="number" type="number" name="number" min="12" max="99" placeholder="12" />
-                </div>
-            </div>
-            <!-- dropdown button -->
-            <div class="form-body">
-                <label id="visits-label" for="num-visits">How many times have you eaten at our establisment?</label>
-                <select id="num-visits">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5+</option>
-                </select>
-                <!-- rating -->
-                <div>
-                    <p>How would you rate your most recent visit?</p>
-                    <label for="great" checked>
-                        <input type="radio" id="great" name="radio1" value="great" />
-                        Great!</label>
-                    <label for="good">
-                        <input type="radio" id="good" name="radio1" value="good" />
-                        Good</label>
-                    <label for="okay">
-                        <input type="radio" id="okay" name="radio1" value="okay" />
-                        Okay</label>
-                    <label for="bad">
-                        <input type="radio" id="bad" name="radio1" value="bad" />
-                        Bad</label>
-                </div>
-                <!-- dropdown button -->
-                <div id="dropdown" name="dropdown">
-                    <label id="dropdown" for="dropdown">How did you hear about us?
-                        <select id="dropdown">
-                            <option disabled selected hidden>Select an option</option>
-                            <option>Social Media</option>
-                            <option>Advertisement</option>
-                            <option>Word-of-mouth</option>
-                            <option>Other</option>
-                        </select>
-                    </label>
-                </div>
-                <!-- checkbox -->
-                <div id="checkbox-group" name="checkbox-group">
-                    <p>What are some of your favorite dishes?</p>
-                    <label for="cheeseburger">
-                        <input type="checkbox" id="cheeseburger" value="cheeseburger" />
-                        Cheeseburger</label>
-                    <label for="sandwich">
-                        <input type="checkbox" id="sandwich" value="sandwich" />
-                        Sandwich</label>
-                    <label for="wrap">
-                        <input type="checkbox" id="wrap" value="wrap" />
-                        Wrap</label>
-                    <label for="salad">
-                        <input type="checkbox" id="salad" value="salad" />
-                        Salad</label>
-                    <label for="soup">
-                        <input type="checkbox" id="soup" value="soup" />
-                        Soup</label>
-                    <label for="apps">
-                        <input type="checkbox" id="apps" value="apps" />
-                        Appetizers</label>
-                    <label for="cheesecake">
-                        <input type="checkbox" id="cheesecake" value="cheesecake" />
-                        Cheesecake</label>
-                    <label for="chocolate-cake">
-                        <input type="checkbox" id="chocolate-cake" value="chocolate-cake" />
-                        Chocolate Cake</label>
-                    <label for="wiki">
-                        <input type="checkbox" id="iceCream" value="iceCream" />
-                        Ice Cream</label>
-                    <label for="brownie">
-                        <input type="checkbox" id="brownie" value="brownie" />
-                        Brownie</label>
-                    <label for="other">
-                        <input type="checkbox" id="other" value="other" />
-                        Other</label>
-                </div>
-                <div>
-                    <p>Would you recommend our restaurant?</p>
-                    <label for="definitely" checked>
-                        <input type="radio" id="definitely" name="radio2" value="definitely" />
-                        Definitely</label>
-                    <label for="maybe">
-                        <input type="radio" id="maybe" name="radio2" value="maybe" />
-                        Maybe</label>
-                    <label for="not-sure">
-                        <input type="radio" id="not-sure" name="radio2" value="not-sure" />
-                        Not sure</label>
-                </div>
-                <!-- comments & suggestions -->
-                <div id="text-area" name="text-area">
-                    <label for="suggestions">Any comments or suggestions?</label>
-                    <textarea id="suggestions" name="suggestions"></textarea>
-                </div>
-                <!-- submit button -->
-                <div id="submit-button" name="submit-button">
-                    <input type="submit" value="Submit" id="submit" />
-                </div>
-            </div>
-        </form>
+  <body>
+    <main class="container">
+      <header>
+        <h1 id="title" class="text-center">Restaurant Survey Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for your participation in this survey!
+        </p>
+      </header>
+      <form id="survey-form">
+        <div id="user-info">
+          <div class="form-group">
+            <label id="name-label" for="name">Name:</label>
+            <input
+              id="name"
+              class="form-control"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email:</label>
+            <input
+              id="email"
+              class="form-control"
+              name="email"
+              placeholder="Enter your email"
+              type="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="number">Age</label>
+            <input
+              id="number"
+              class="form-control"
+              type="number"
+              name="number"
+              min="12"
+              max="99"
+              placeholder="12"
+            />
+          </div>
+        </div>
+        <!-- dropdown button -->
+        <div class="form-body">
+          <div class="form-group">
+            <p>How many times have you eaten at our establisment?</p>
+            <select id="num-visits" class="form-control" name="visits" required>
+              <option disabled selected>Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select>
+          </div>
+          <!-- rating -->
+          <div>
+            <p>How would you rate your most recent visit?</p>
+            <label>
+              <input
+                type="radio"
+                id="great"
+                class="input-radio"
+                name="radio1"
+                value="great"
+              />
+              Great!</label
+            >
+            <label>
+              <input
+                type="radio"
+                id="good"
+                class="input-radio"
+                name="radio1"
+                value="good"
+              />
+              Good</label
+            >
+            <label>
+              <input
+                type="radio"
+                id="okay"
+                class="input-radio"
+                name="radio1"
+                value="okay"
+              />
+              Okay</label
+            >
+            <label>
+              <input
+                type="radio"
+                id="bad"
+                class="input-radio"
+                name="radio1"
+                value="bad"
+              />
+              Bad</label
+            >
+          </div>
+          <!-- dropdown button -->
+          <div class="form-group" id="dropdown" name="dropdown">
+            <p>How did you hear about us?</p>
+            <select id="hear-about" class="form-control" name="hear-about">
+              <option disabled selected>Select an option</option>
+              <option>Social Media</option>
+              <option>Advertisement</option>
+              <option>Word-of-mouth</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <!-- checkbox -->
+          <div class="form-group" id="checkbox-group" name="checkbox-group">
+            <p>
+              What are some of your favorite dishes?<span class="clue"
+                >(Check all that apply)</span
+              >
+            </p>
+            <label>
+              <input
+                type="checkbox"
+                id="cheeseburger"
+                class="input-checkbox"
+                value="cheeseburger"
+              />
+              Cheeseburger</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="sandwich"
+                class="input-checkbox"
+                value="sandwich"
+              />
+              Sandwich</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="wrap"
+                class="input-checkbox"
+                value="wrap"
+              />
+              Wrap</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="salad"
+                class="input-checkbox"
+                value="salad"
+              />
+              Salad</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="soup"
+                class="input-checkbox"
+                value="soup"
+              />
+              Soup</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="apps"
+                class="input-checkbox"
+                value="apps"
+              />
+              Appetizers</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="cheesecake"
+                class="input-checkbox"
+                value="cheesecake"
+              />
+              Cheesecake</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="chocolate-cake"
+                class="input-checkbox"
+                value="chocolate-cake"
+              />
+              Chocolate Cake</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="iceCream"
+                class="input-checkbox"
+                value="iceCream"
+              />
+              Ice Cream</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="brownie"
+                class="input-checkbox"
+                value="brownie"
+              />
+              Brownie</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                id="other"
+                class="input-checkbox"
+                value="other"
+              />
+              Other</label
+            >
+          </div>
+          <div class="form-group">
+            <p>Would you recommend our restaurant?</p>
+            <label>
+              <input
+                type="radio"
+                id="definitely"
+                class="input-radio"
+                name="radio2"
+                value="definitely"
+              />
+              Definitely</label
+            >
+            <label>
+              <input
+                type="radio"
+                id="maybe"
+                class="input-radio"
+                name="radio2"
+                value="maybe"
+              />
+              Maybe</label
+            >
+            <label>
+              <input
+                type="radio"
+                id="not-sure"
+                class="input-radio"
+                name="radio2"
+                value="not-sure"
+              />
+              Not sure</label
+            >
+          </div>
+          <!-- comments & suggestions -->
+          <div class="form-group" id="text-area" name="text-area">
+            <p>Any comments or suggestions?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+          <!-- submit button -->
+          <div class="form-group">
+            <button type="submit" class="submit-button" id="submit">
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
     </main>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" async defer></script>
-</body>
-
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      async
+      defer
+    ></script>
+  </body>
 </html>
